@@ -1,0 +1,847 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Mathématiques & automatismes</title>
+
+    <meta name="description" content="Liaison C3 - Collège Beurnonville - Septembre 2022">
+    <meta name="author" content="Régis Deleuze">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="dist/reset.css">
+    <link rel="stylesheet" href="dist/reveal.css">
+
+    <!-- Here we setup the stereopticon theme-->
+    <link rel="stylesheet" href="dist/theme/stereopticon.css" id="theme">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? '../reveal.js/css/print/pdf.css' : '../reveal.js/css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+    
+    <script src="js/spotlight.bundle.js"></script>
+       
+
+</head>
+
+<body>
+
+    <div class="reveal">
+
+        <!-- Any section element inside of this container is displayed as a slide -->
+        <div class="slides">
+            <section class="title">
+                <h1>Mathématiques & automatismes</h1>
+
+                <div class="subtitle">
+                    Liaison C3 - Collège Beurnonville - Octobre 2022
+                </div>
+
+                <div class="authors">
+                    <div class="author">
+                        <div class="name">
+                            Régis Deleuze
+                        </div>
+                        <div class="institution">
+                            Collège Beurnonville, Troyes
+                        </div>
+                    </div>
+
+                    <div class="author">
+                        <div class="name">
+                            Jean-Paul Sacchetti
+                        </div>
+                        <div class="institution">
+                            École Fernand Ganne, Saint-Julien-les-Villas
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+            
+            <section>  
+                <section>
+                    <h2>Les automatismes dans les textes officiels</h2>
+                
+                    <h3>Plan Villani-Torossian</h3>
+                    
+                    <p>Point ⓬ du plan Villani-Torossian :</p>
+                    <blockquote cite="https://www.education.gouv.fr/21-mesures-pour-l-enseignement-des-mathematiques-3242">                   
+                        Développer les automatismes de calcul à tous les âges par des pratiques rituelles (répétition, calculs mental et intelligent, etc.), pour favoriser la mémorisation et libérer l’esprit des élèves en vue de la résolution de problèmes motivants.
+                    </blockquote>
+                    <div style="font-size: 0.75em;text-align: right;">
+                        <a  href="https://www.education.gouv.fr/21-mesures-pour-l-enseignement-des-mathematiques-3242" target="_blank">https://www.education.gouv.fr/21-mesures-pour-l-enseignement-des-mathematiques-3242</a>
+                    </div>
+                </section>
+                
+                <section>
+                    <h2>Les automatismes dans les textes officiels (II)</h2>
+                    
+                    <h3>Document «&#8239;Les automatismes au collège&#8239;» (Eduscol)</h3>
+                    
+                    <blockquote cite="https://eduscol.education.fr/document/33866/download"> 
+                        Ces automatismes sont de différentes natures et concernent aussi bien des règles de calcul,
+                        des conventions, des formules, des procédures ou des images mentales (...) 
+                    </blockquote>
+                    
+                    <blockquote cite="https://eduscol.education.fr/document/33866/download"> 
+                        Ces principes induisent différentes conséquences quant à la construction des automatismes sur les quatre années du collège :
+                        <ul>
+                            <li>Impulser, dans le cadre de la liaison école-collège, un travail collectif sur les automatismes attendus en début de 6e ;</li>
+                            <li>(...)</li>
+                        </ul>
+                    </blockquote>  
+
+                    <div style="font-size: 0.75em;text-align: right;">
+                        <a href="https://eduscol.education.fr/document/33866/download" target="_blank">https://eduscol.education.fr/document/33866/download</a>
+                    </div>
+                </section>
+                
+                <section>
+                    <h2>Les automatismes dans les textes officiels (III)</h2>
+                    
+                    <h3>Les programmes du cycle 3</h3>
+                    
+                    <blockquote cite="https://www.education.gouv.fr/media/70282/download"> 
+                        (...) il est indispensable que les élèves puissent s’appuyer sur suffisamment de
+                                faits numériques mémorisés et sur des procédures automatisées de calcul élémentaires.
+                    </blockquote>
+                    
+                    <blockquote cite="https://www.education.gouv.fr/media/70282/download"> 
+                        Mobiliser les faits numériques mémorisés au cycle 2, notamment les tables de multiplication
+                        jusqu’à 9. Connaître les multiples de 25 et de 50, les diviseurs de 100.
+                    </blockquote>
+                    
+                    <div style="font-size: 0.75em;text-align: right;">
+                        <a href="https://www.education.gouv.fr/media/70282/download" target="_blank">https://www.education.gouv.fr/media/70282/download</a>
+                    </div>
+                    
+                </section>
+                
+                
+                <section>
+                    <h2>Les automatismes dans les textes officiels (IV)</h2>
+                    
+                    <h3>Les programmes du cycle 4</h3>
+                    
+                    <blockquote cite="https://eduscol.education.fr/document/621/download"> 
+                        Ceci [la résolution de problème] suppose de disposer d’automatismes (corpus de connaissances et de procédures
+                        automatisées immédiatement disponibles en mémoire). À la fin de l’explicitation des attendus
+                        de fin de cycle de chacun des quatre premiers thèmes du programme figure une liste de ces
+                        automatismes à développer par les élèves. L’acquisition de ces automatismes est favorisée
+                        par la mise en place d’activités rituelles, notamment de calcul (mental ou réfléchi), ayant
+                        pour double objectif la stabilisation et la pérennisation des connaissances, des procédures et
+                        des stratégies.
+                    </blockquote>
+
+                    <div style="font-size: 0.75em;text-align: right;">
+                        <a href="https://eduscol.education.fr/document/621/download" target="_blank">https://eduscol.education.fr/document/621/download</a>
+                    </div>
+                    
+                </section>                
+                
+                
+                <section>
+                    <h2>Les automatismes dans les textes officiels (V)</h2>
+                    
+                    <h3>Guide « Résolution de problèmes » - Cours moyen</h3>
+                    
+                    <div class="columns">
+
+                        <div class="col-10">
+                            <blockquote cite="https://eduscol.education.fr/document/32206/download?attachment"> 
+                                Au cours moyen, le traitement de certains problèmes est quasi automatisé.
+                            </blockquote>
+                            
+                            <blockquote cite="https://eduscol.education.fr/document/32206/download?attachment"> 
+                                Développer des quasi-automatismes féconds tout en apprenant à inhiber ceux qui sont contre-productifs
+                            </blockquote>                    
+                                                        
+                        </div>
+                        
+                        <div class="col-2">
+                            <img src="img/guiderespb.png" class="plain">
+                        </div>
+                    </div>
+                    
+                    <div style="font-size: 0.75em;text-align: right;">
+                        <a href="https://eduscol.education.fr/document/32206/download?attachment" target="_blank">https://eduscol.education.fr/document/32206/download?attachment</a>
+                    </div>
+                </section>
+                
+                <section>
+                    <h2>Les automatismes dans les textes officiels (VI)</h2>
+                    
+                    <h3>Guide « Résolution de problèmes » - Collège</h3>
+                    
+                    <div class="columns">
+
+                        <div class="col-10">
+                            <blockquote cite="https://eduscol.education.fr/document/13132/download?attachment"> 
+                                (...) les exercices de calcul mental et les questions flash avec des contextes simples seront nombreux afin que les automatismes libèrent la
+                                mémoire et la réflexion lors de la résolution de problèmes complexes.
+                            </blockquote>
+                            
+                            <blockquote cite="https://eduscol.education.fr/document/13132/download?attachment"> 
+                                Pour rendre les élèves capables de résoudre des problèmes en autonomie, il est nécessaire de développer certains automatismes (...)
+                                Certaines questions flash peuvent permettre d’entraîner les élèves à développer les six compétences mathématiques.
+                            </blockquote>                    
+                                                        
+                        </div>
+                        
+                        <div class="col-2">
+                            <img src="img/guiderespbC4.png" class="plain">
+                        </div>
+                    </div>
+                    
+                    <div style="font-size: 0.75em;text-align: right;">
+                        <a href="https://eduscol.education.fr/document/13132/download?attachment" target="_blank">https://eduscol.education.fr/document/13132/download?attachment</a>
+                    </div>
+                </section>       
+
+
+                <section>
+                    <h2>Les automatismes dans les textes officiels (VII)</h2>
+                    
+                    <h3>Au lycée</h3>
+                    <p>Au lycée, l'acquisition d'automatismes est incluse dans les objectifs de tous les programmes, de la seconde à la terminale (voies GT et pro).</p>
+                    En particulier, dans toutes les classes de la voie professionnelle (y compris CAP) ainsi qu'en classe de première technologique, les automatismes font partie intégrante du programme.</p>
+                    
+                    <blockquote cite="https://eduscol.education.fr/document/24559/download" style="width:80%;"> 
+                    Cette partie du programme vise à construire et à entretenir des habiletés dans les domaines
+                    du calcul, de l’information chiffrée et des représentations graphiques. Il s’agit d'automatiser le
+                    recours à des connaissances, des procédures, des méthodes et des stratégies dont
+                    l'insuffisante maîtrise fait obstacle à la réussite scolaire en mathématiques et dans les autres
+                    disciplines, compromet la réussite d'études supérieures et peut constituer un handicap dans
+                    la vie sociale. Plus les élèves sont à l’aise avec ces automatismes, plus ils sont mis en
+                    confiance et en réussite dans l’apprentissage des mathématiques. Ce faisant, ils
+                    développent également leur esprit critique par une meilleure maîtrise des chiffres et du calcul
+                    et une meilleure lecture et compréhension des représentations de données dont les
+                    graphiques.
+                    </blockquote> 
+                    
+                    <div style="font-size: 0.75em;text-align: right;">
+                        <a href="https://eduscol.education.fr/document/24559/download" target="_blank">https://eduscol.education.fr/document/24559/download</a>
+                    </div>
+                </section>
+            </section>  
+            
+
+
+            <section>                
+                <section>
+                <h2>Qu'est-ce qu'un automatisme ?</h2>
+
+                <h3>Description</h3>
+
+                <p>
+                Un automatisme obéit à trois critères :
+                    <ul>
+                        <li>un processus automatique doit se produire <b>sans intention</b> : il est donc «&#8239;automatiquement&#8239;» déclenché par la tâche à effectuer ;</li>
+                        <li>un processus automatique est <b>inconscient</b> : nous n’avons pas une connaissance explicite de la façon dont ce processus se produit ;</li>
+                        <li>un processus automatique <b>n'interfère pas</b> avec une autre activité mentale en cours : il se déroule parallèlement à une autre activité.</li>
+                    </ul>
+                </p>
+                
+                <p>
+                Ainsi, les automatismes sont inconscients et rapides, à faible coût cognitif, requièrent une attention minimale, sont résistants au temps et à l’oubli et 
+                leur exécution se fait généralement (mais pas toujours) sans erreur.                
+                </p>
+                </section>
+
+                <section>
+                <h2>Procédure automatisée & automatisme</h2>
+                
+                <span class="pastille">Spécifique au calcul</span>
+
+                <h3>Procédure automatisée</h3>
+                <p>On parle de <b>procédure automatisée</b> quand les connaissances mises en œuvre dans le
+                    traitement d’une situation sont directement restituées par l'élève sans reconstruction des concepts sous-jacents.
+                </p>
+                
+                <h3>Automatisme</h3>
+                
+                <p>Un <b>automatisme</b> se définit, selon le contexte, comme :
+                    <ul>
+                        <li>le recours à un ensemble de procédures automatisées installées en mémoire et ayant fait l'objet d'un enseignement ou d'une pratique préalable ;</li>
+                        <li style="list-style-type: none;margin-top: 10px;margin-bottom: 10px;margin-left: -1em;font-weight: 400;">Ou</li>
+                        <li>un comportement se caractérisant par une mobilisation quasi systématique de l'élève d'un seul type de procédure quelles que
+                            soient les données numériques du calcul à effectuer.</li>
+                    </ul>                
+                </p>
+                </section>
+                
+                <section>
+                <h2>Paradoxe</h2>
+                
+                <span class="pastille">Spécifique au calcul</span>
+                
+                <p>La connaissance et la maîtrise d'un nombre insuffisant de procédures automatisées peuvent conduire l'élève à adopter en calcul un 
+                    comportement automatisé. 
+                </p>
+                
+                <div class="block">                    
+                    <p>Trop peu d’automatismes (au sens de procédures automatisées) renforce l’automatisme (au sens de recours systématique à une seule procédure).
+                        Et inversement...</p>
+                </div>
+                
+                <p>Pour dépasser ce paradoxe, il est nécessaire d'enrichir, progressivement, le panel des procédures automatisées en installant de 
+                    nouveaux faits numériques avec une pratique régulière du calcul mental. 
+                </p>
+                </section>
+                
+                <section>
+                <h2>Automatismes mathématiques (Jérôme Prado)</h2>
+                    <iframe src="https://podeduc.apps.education.fr/video/0766-pourquoi-developper-les-automatismes-mathematiques-chez-les-eleves-par-jerome-prado/?is_iframe=true"  style="padding: 0; margin: 0; border:0; height:500px;width:889px;margin:auto;" allowfullscreen ></iframe>                 
+                </section>
+
+            </section>
+
+            <section class="atelier">
+                <h2>Reconnaître des automatismes</h2>
+                <p>Parmi les questions ci-dessous, identifier celles qui relèvent d’un automatisme.</p>
+                
+                <div style="font-size: 0.75em;text-align: right;">
+                    <a  href="media/identifier_automatisme.pdf" target="_blank">identifier_automatisme.pdf</a>
+                </div>
+                
+                <iframe src="media/identifier_automatisme.html"  style="padding: 0; margin-top: 2em;margin-left: auto;margin-right: auto;border:0;width:500px;height:410px;" class="fragment" allowfullscreen ></iframe>  
+            </section>
+
+            
+            <section>
+                <section>
+                    <h2>Enseignement des automatismes : généralités</h2>
+                    <p>Une bonne acquisition d'automatismes chez les élèves s'appuie sur trois leviers principaux :
+                        <ul>
+                            <li>la <b>répétition</b>&#8239;;</li>
+                            <li>l’<b>espacement dans le temps</b> en alternance avec d’autres apprentissages&#8239;;</li>
+                            <li>le <b>test</b> pour consolider les apprentissages.</li>
+                        </ul>
+                    </p>
+                    <p class="lettrine">⚠ Néanmoins, pour un travail efficace sur les automatismes, il s'avère indispensable de définir et de suivre une
+                        stratégie d'enseignement reposant sur la construction préalable d'une progression.
+                    </p>
+
+                </section>
+                <section>
+                    <h2>Enseignement des automatismes : construction d'une progression</h2>
+                    <p>Quelques invariants dans la construction et l'application d'une progression relative à l'enseignement des automatismes :
+                        <ul>
+                            <li>établir, en équipe et pour chaque niveau d'enseignement, une <b>liste relativement courte d’automatismes</b> à construire pendant l’année scolaire (s'appuyer sur les programmes) en choisissant 
+                             des notions qui ont déjà été introduites, construites, manipulées, verbalisées, utilisées ;</li>
+                            <li>prendre garde aux <b>prérequis</b> : pour construire certains automatismes d'autres doivent d'abord être maîtrisés par les élèves ;</li>
+                            <li><b>évaluer</b> régulièrement les acquis (à l'oral, sous forme d'évaluations formatives ou sommatives) afin, en particulier, de
+                                rectifier tout apprentissage erroné avant son automatisation ;</li>
+                            <li>prévoir <b>un test court, en fin d'année scolaire</b>, afin d'évaluer la stratégie d’apprentissage mise en œuvre au sein de 
+                                l'établissement.</li>
+                        </ul>
+                    </p>
+                </section>
+            </section>
+            
+            <section class="atelier">
+                <h2>Identifier les automatismes au Cycle 3</h2>
+                <p>En s'appuyant sur les programmes du Cycle 3, sur les attendus de fin de cycle ainsi que sur les repères de progression, dresser la liste de tous les automatismes susceptibles 
+                    d'être enseignés au cours du cycle.
+                </p>
+                <div style="text-align: right;line-height: 1;margin-top: 1em;margin-bottom: 1em;">
+                <a style="font-size: 0.75em;text-align: right;" href="https://www.education.gouv.fr/media/70282/download" target="_blank">Programmes du Cycle 3</a><br>
+                
+                <a style="font-size: 0.75em;text-align: right;" href="https://eduscol.education.fr/document/13990/download" target="_blank">Attendus de fin d'année au CM1</a><br>
+                
+                <a style="font-size: 0.75em;text-align: right;" href="https://eduscol.education.fr/document/14002/download" target="_blank">Attendus de fin d'année au CM2</a><br>
+                
+                <a style="font-size: 0.75em;text-align: right;" href="https://eduscol.education.fr/document/14014/download" target="_blank">Attendus de fin d'année en 6E</a><br>
+                
+                <a style="font-size: 0.75em;text-align: right;" href="https://eduscol.education.fr/document/14026/download" target="_blank">Repères annuels de progression au Cycle 3</a>  
+                </div>
+
+                   <div class="columns fragment" >
+                        <div class="col-2">
+                            <a href="https://docs.google.com/document/d/1sRoX-Tk8BSj0n_Q0BLoTYpV-5Xcy2S4BXqNm3RqLf6Q/edit?usp=sharing" target="_blank"><img src="img/liste_auto_c3.png" class="plain"></a>
+                        </div>                   
+                        <div class="col-10" style="padding-left:2em;">                                        
+                                <a href="https://docs.google.com/document/d/1sRoX-Tk8BSj0n_Q0BLoTYpV-5Xcy2S4BXqNm3RqLf6Q/edit?usp=sharing" target="_blank">Liste des automatismes repérés</a> (Google Docs)
+                        </div>                    
+                    </div>                                
+            </section>            
+
+
+
+            <section>
+                <section>
+                    <h2>Progressivité dans la construction des automatismes</h2>
+                    
+                    <p>Chaque équipe disciplinaire est libre de définir une liste d’automatismes dans le cadre des programmes officiels.</p>
+                    <p>Cependant, dresser une liste ne suffit pas : il est impératif que les équipes se mettent d'accord sur le <b>degré de difficulté des attendus</b>.</p>
+                    <p>De surcroît, une fois la liste des automatismes constituée, il est nécessaire de définir, individuellement ou
+                       collectivement, une <b>stratégie d’apprentissage</b> qui prenne en compte :
+                       <ul>
+                            <li>l'articulation entre la découverte des notions nouvelles et les automatismes à construire ou à réactiver (articulation entre les années
+                            n et n+1)&#8239;;</li>
+                            <li>la nécessité de maîtriser des automatismes afin d’en développer d’autres&#8239;;</li>
+                            <li>la progressivité à mettre en œuvre sur les trois années du cycle.</li>                            
+                       </ul>
+                    <p>
+                </section>
+                
+                <section>
+                    <h2>Progressivité dans la construction des automatismes : les fractions</h2>
+                    
+                    <div class="my3cols">
+                        <div class="timeline-unit">CM1</div>
+                        <div class="timeline-unit">CM2</div>
+                        <div class="timeline-unit">6E</div>
+                        <div>
+                            <ul class="fragment highlight-mine" data-fragment-index="0">
+                                <li>Utiliser des fractions pour rendre compte de partages.</li>
+                                <li>Repérer une fraction sur une demi-droite graduée.</li>
+                                <li>Comparer de fractions de même dénominateur.</li>
+                                <li class="fragment highlight-mine" data-fragment-index="2">Écrire une fraction décimale comme somme d’un entier et d’une fraction inférieure à 1.</li>
+                                <li class="fragment highlight-mine" data-fragment-index="1">Additionner deux fractions décimales de même dénominateur.</li>
+                            </ul>
+                        </div>
+                        <div style="background-color: #0080800f;">
+                            <ul>
+                                <li>Utiliser des fractions pour rendre compte de partages.</li>
+                                <li>Repérer une fraction sur une demi-droite graduée.</li>
+                                <li>Comparer de fractions de même dénominateur.</li>
+                                <li>Encadrer une fraction entre deux entiers consécutifs.</li>   
+                                <li class="fragment highlight-mine" data-fragment-index="2">Écrire une fraction décimale comme somme d’un entier et d’une fraction inférieure à 1.</li>
+                                <li class="fragment highlight-mine" data-fragment-index="1">Additionner deux fractions décimales de même dénominateur.</li>   
+                                <li>Connaître des égalités entre des fractions usuelles ($\frac{5}{10}=\frac{1}{2}$, $\frac{10}{100}=\frac{1}{10}$, ...).</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <ul>
+                                <li>Utiliser des fractions pour rendre compte de partages.</li>
+                                <li>Repérer une fraction sur une demi-droite graduée.</li>
+                                <li>Comparer de fractions de même dénominateur.</li>
+                                <li class="fragment highlight-mine" data-fragment-index="2">Encadrer une fraction entre deux entiers consécutifs.</li>   
+                                <li>Écrire une fraction décimale comme somme d’un entier et d’une fraction inférieure à 1.</li>
+                                <li class="fragment highlight-mine" data-fragment-index="1">Additionner deux fractions de même dénominateur.</li>   
+                                <li>Connaître des égalités entre des fractions usuelles.</li>
+                                <li>Utiliser des fractions pour exprimer un quotient ($\frac{a}{b}\times b=a$).</li>
+                                <li>Utiliser des fractions pour mesurer des grandeurs.</li>
+                                <li>Faire le lien entre « la moitié de » et multiplier par $\frac{1}{2}$ ou prendre 50 %, « le quart de » et multiplier par $\frac{1}{4}$ ou prendre 25 %, ...
+                            </ul>                        
+                        </div>
+                    </div>
+                    
+                    <div class="fragment fade-in-then-out" data-fragment-index="0" style="display: block;position: absolute;width: 700px;bottom: 1em;text-align: justify;background-color: #214B5DD6;padding: 0.5em;color: white;font-weight:bold;border-radius: 20px;box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;">
+                        Ces notions, introduites en CM1 (en P1 et P2), peuvent commencer à être rendues automatiques dès la période 3 mais ne deviendront des automatismes
+                        qu'à la condition de poursuivre le travail en CM2/6<sup>ème</sup>.
+                    </div>
+                    
+                    <div class="fragment fade-in-then-out" data-fragment-index="1" style="display: block;position: absolute;width: 700px;bottom: 1em;text-align: justify;background-color: #214B5DD6;padding: 0.5em;color: white;font-weight:bold;border-radius: 20px;box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;">
+                        Les programmes induisent une progressivité «&#8239;naturelle&#8239;» des apprentissages. Néanmoins, le niveau de difficulté attendu peut être discuté en équipe.
+                    </div>
+                    
+                    <div class="fragment fade-in-then-out" data-fragment-index="2" style="display: block;position: absolute;width: 700px;bottom: 1em;text-align: justify;background-color: #214B5DD6;padding: 0.5em;color: white;font-weight:bold;border-radius: 20px;box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;">
+                        Pour rendre automatique l'encadrement d'une fraction par deux entiers, il est préférable qu'écrire une fraction comme somme d'un entier et d'une
+                        fraction inférieure à 1 soit préalablement devenu un automatisme.
+                    </div>                    
+                                        
+                </section>                
+            </section>
+
+
+
+            <section class="atelier">
+                <h2>Définir une liste d'automatismes au Cycle 3</h2>
+                
+                <p>En vous limitant à une douzaine d'items, dégager une liste d'automatismes qui vous semblent prioritaires à travailler en CM1 et en CM2.
+                    <p>    
+                    
+                <div class="columns" >
+                        <div class="col-2">
+                            <a href="https://docs.google.com/document/d/1j8YusUw1xU5O5kupW64f3U1deVsqtUwWXq9hPNTcYCM/edit?usp=sharingg" target="_blank"><img src="img/liste_auto_6E.png" class="plain"></a>
+                        </div>                   
+                        <div class="col-10" style="padding-left:2em;">                                        
+                                <a href="https://docs.google.com/document/d/1j8YusUw1xU5O5kupW64f3U1deVsqtUwWXq9hPNTcYCM/edit?usp=sharing" target="_blank">Automatismes retenus en 6<sup>ème</sup></a> (Google Docs)
+                        </div>                    
+                </div>                      
+            </section>
+
+
+
+           <section>     
+                <section>
+                    <h2>Modalités : généralités</h2>
+                                    
+                    
+                    <p>La pratique d’<b>activités rituelles</b> a pour objectif de construire, d’entretenir et d’automatiser un ensemble de
+                        connaissances, procédures, méthodes et stratégies tout au long des apprentissages.</p>
+                    <p>La pratique d’activités rituelles régulières est construite autour des intentions suivantes :
+                        <ul>
+                            <li><b>consolider et élargir</b> les acquis antérieurs&#8239;;</li>
+                            <li><b>assurer un entraînement</b> faisant appel à des connaissances, procédures, méthodes et stratégies&#8239;;</li>
+                            <li>rendre disponibles des <b>réflexes</b> en situation de résolution de problèmes&#8239;;</li>
+                            <li><b>remémorer</b> régulièrement des éléments en cours d’apprentissage&#8239;;</li>
+                            <li><b>diagnostiquer</b> des difficultés persistantes&#8239;;</li>
+                            <li>faire <b>verbaliser</b> et <b>formaliser</b> des énoncés et définitions usuels&#8239;;</li>
+                            <li><b>exploiter</b> les erreurs rencontrées&#8239;;</li>
+                            <li><b>rythmer</b> par un temps court et dynamique une partie de séance.</li>
+                        </ul>
+                    </p>    
+                </section>
+                
+                <section>
+                    <h2>Modalités : cartes Flash</h2>
+                    
+                    <p>Les <b>cartes Flash</b> (ou <span style="font-style:italic;">flashcards</span>) sont des cartes imprimées en recto-verso et qui contiennent une question au recto et
+                        la réponse associée au verso.
+                    </p>
+                    
+                    <div class="columns" >
+                    
+                        <div class="col-4">
+                            <div class="flip-card-container">
+                                <div class="flip-card">
+                                  <div class="flip-card-front">
+                                    <div class="flip-card-title">Question</div>
+                                    <div class="fcq">
+                                        Que signifie le préfixe grec <span style="font-style: italic;">hecto</span>&#8239;?
+                                    </div>
+                                  </div>
+                                  <div class="flip-card-back">
+                                    <div class="flip-card-title reponse">Réponse</div>
+                                    <div class="fcq reponse">
+                                      <span style="font-style: italic;">hecto</span> veut dire «&#8239;100 fois plus grand que l'unité&#8239;».
+                                    </div>
+                                    <div class="fcexemple">
+                                        <span>Exemple :</span>
+                                        <p>Dans 1 hg il y a 100 g.</p>
+                                    </div>
+                                  </div>
+                                </div>
+                            </div> 
+                        </div>
+                        
+                        <div class="col-8">
+                         <p>Avec de telles cartes, les élèves peuvent tester, à volonté et en autonomie, leurs connaissances et obtenir un retour immédiat sur les erreurs commises. 
+                         </p>
+                         <p>De très nombreuses modalités d'utilisation sont possibles aussi bien en classe qu'en dehors (en étude, en APC, au sein du dispositif 
+                            «&#8239;Devoirs faits&#8239;», à la maison, ...).
+                         </p>
+                        </div>
+                    </div>
+                </section>
+                
+                <section>
+                    <h2>Modalités : cartes Flash (boîtes de Leitner)</h2>
+                    
+                    <p>L'information apprise se perd avec le temps quand elle n'est pas revue. Pour mieux retenir les informations, il faut <b>répéter</b>.</p>
+                    <div class="columns" >
+                        <div class="col-10" style="font-size: 0.65em;text-align:justify;padding-right: 2em;"> 
+                             <p>En répétant ce que l’on souhaite mémoriser, en laissant passer à chaque fois un peu plus de temps entre chaque répétition, on relance notre mémoire. Pour certains chercheurs, mémoriser à long terme demande de revoir les notions le jour même, puis deux jours plus tard puis deux fois la semaine suivante puis deux fois dans le mois qui suit.
+                             </p>
+                        </div>
+                        
+                        <div class="col-2">
+                            <a class="spotlight"  href="img/courbe_oubli.svg"><img src="img/courbe_oubli.svg" class="plain"></a>
+                        </div>
+                    </div>
+                    
+                    <div style="font-size: 0.75em;text-align: right;">
+                        <a href="https://apprendreplusfacilement.learnybox.com/article-1/la-courbe-de-loubli/" target="_blank">La courbe de l’oubli d'Ebbinghaus</a>
+                    </div>
+                    
+                    <p>La <b>méthode des boîtes</b> (encore appelée <b>système Leitner</b>) permet d'améliorer l'efficacité des cartes Flash.
+                    </p>
+                    <div class="columns" >
+                        <div class="col-4">
+                            <a class="spotlight"  href="img/Leitner_system_animation.gif"><img src="img/Leitner_system_animation.gif" class="plain"></a>
+                        </div>
+                        
+                        <div class="col-8" style="font-size: 0.65em;text-align:justify;padding-left: 2em;"> 
+                             <p>Dans cette méthode, les cartes mémoire sont classées en groupes selon la façon dont l'apprenant les connaît. Les apprenants essaient de se rappeler la réponse écrite sur une carte. S'ils réussissent, ils déplacent la carte au groupe suivant. S'ils échouent, ils la renvoient au premier groupe. Plus le groupe est élevé, plus la période de temps avant que l'apprenant revoie les cartes est grande. 
+                             </p>
+                        </div>                        
+                    </div>  
+                    
+                    <div style="font-size: 0.75em;text-align: right;">
+                        <a href="https://fr.wikipedia.org/wiki/Système_Leitner" target="_blank">https://fr.wikipedia.org/wiki/Système_Leitner</a>
+                    </div>
+                </section>                
+                
+                <section>
+                    <h2>Modalités : questions Flash</h2>
+                    <p>La construction d’automatismes nécessite de systématiser la pratique des <b>questions Flash</b>. Les
+                        questions doivent être limitées en nombre (5 maximum) afin de permettre un retour sur les
+                        erreurs.</p>
+                    
+                    <div class="columns" >
+                        <div class="col-6" style="text-align:center;">
+                            <iframe src="media/QFlash_C3.html"  style="padding: 0; border:0;width:500px;height:410px;" allowfullscreen ></iframe>                         
+                        </div>
+                        
+                        <div class="col-6">
+                            <blockquote cite="https://eduscol.education.fr/document/17194/download">                   
+                                Pour être efficaces, les questions flash doivent être proposées de façon régulière,
+                                tout au long du cycle, et s’inscrire dans une stratégie d’enseignement qui articule de
+                                façon cohérente entraînement, évaluation, remédiation et consolidation. Elles se prêtent à
+                                l’utilisation de supports variés : papier, diaporama, enregistrement oral.
+                            </blockquote>
+                            <div style="font-size: 0.75em;text-align: right;">
+                                <a  href="https://eduscol.education.fr/document/17194/download" target="_blank">Types de tâches au C4</a>   
+                            </div>                        
+                        </div>
+                    </div>  
+
+                    <div class="block" style="margin-right:0;font-size: 0.8em;font-weight: bold;text-align:justify;">                    
+                        <p>⚠ Les questions Flash ne sont pas une modalité adaptée à la construction des automatismes
+                            méthodologiques liés à la résolution de problèmes (...)
+                        </p>
+                    </div>
+                </section>   
+                
+                
+                <section>
+                    <h2>Modalités : géométrie mentale</h2>
+                    <!--<p>Objectifs :
+                        <ul>
+                            <li>donner aux élèves la possibilité d’envisager mentalement une figure, indépendamment des contraintes de tracé aux instruments ;</li>
+                            <li>faire utiliser le vocabulaire géométrique en situation et évaluer sa compréhension et sa mobilisation ;</li>
+                            <li>favoriser la liaison entre la description d’une figure et sa représentation graphique ;</li>
+                            <li>montrer l’intérêt du tracé à main levée pour représenter une figure géométrique et en percevoir les propriétés ;</li>
+                            <li>permettre une prise de conscience des propriétés des figures et une approche de l’argumentation ;</li>
+                            <li>faire évoluer chez les élèves le statut de la figure géométrique, en dépassant le simple dessin géométrique aux instruments.</li>
+                        </ul>
+                    </p>-->
+                    <div>
+                        <div style="width: 55%;text-align: justify;background: #a5f2dd70;border-radius:0.5em;padding:0.5em 1em;">
+                            <span>❶</span> Un texte descriptif ou constructif est donné <b>oralement</b>, évoquant une figure géométrique simple.
+                        </div>
+                        
+                        <div style="width: 55%;text-align: justify;background: #a5f2dd70;border-radius:0.5em;padding:0.5em 1em;margin:1em auto;position: relative;">
+                        <div style="position:absolute;left:-1.5em;font-size:3em;">➥</div>
+                            ❷ Au signal, les élèves effectuent un <b>tracé à main levée</b> sur une feuille ou une ardoise.
+                        </div>
+                        
+                        <div style="width: 55%;text-align: justify;background: #a5f2dd70;border-radius:0.5em;padding:0.5em 1em;margin-left:auto;position: relative;">
+                        <div style="position:absolute;left:-1.5em;font-size:3em;">➥</div>
+                            ❸ <b>Échanges</b> sur les productions réalisées, correction des erreurs, mise au point du vocabulaire et des propriétés.
+                        </div>                        
+                    </div>
+                    
+ 
+                            <div style="font-size: 0.75em;text-align: right;margin-top:1em;">
+                                <a  href="http://jean-luc.bregeon.pagesperso-orange.fr/Page%203-9.htm" target="_blank">Géométrie mentale (Jean-Luc Brégeon)</a>   
+                            </div>                        
+                </section>                  
+
+                <section>
+                    <h2>Modalités : sites Web & jeux (1/2)</h2>
+                    
+                    
+                      <div class="mytab">
+                        <div class="mycell">
+                          <div class="mytitle"><a href="https://www.mathador.fr/" target="_blank">Mathador</a></div>
+                          <div class="mycontent">
+                            <div class="myimage"><a href="https://www.mathador.fr/" target="_blank"><img src="img/mathador.png" class="plain"></a></div>
+                            <div class="mydesc">Jeu de calcul mental existant en diverses déclinaisons.</div>
+                          </div>
+                        </div>
+                        <div class="mycell">
+                          <div class="mytitle"><a href="https://maths-au-quotidien.fr/" target="_blank">Maths-au-quotidien</a></div>
+                          <div class="mycontent">
+                            <div class="myimage"><a href="https://maths-au-quotidien.fr/" target="_blank"><img src="img/mathsauquotidien.png" class="plain"></a></div>
+                            <div class="mydesc">Le module Automaths du site permet la création de diaporamas utilisables en ligne.</div>
+                          </div>
+                        </div>
+                        <div class="mycell">
+                          <div class="mytitle"><a href="https://mathsmentales.net/" target="_blank">MathsMentales</a></div>
+                          <div class="mycontent">
+                            <div class="myimage"><a href="https://mathsmentales.net/" target="_blank"><img src="img/mathsmentales.png" class="plain"></a></div>
+                            <div class="mydesc">Automatismes et calcul mental à données aléatoires sous forme de diaporamas.</div>
+                          </div>
+                        </div>
+                        <div class="mycell">
+                          <div class="mytitle"><a href="https://coopmaths.fr/mathalea.html" target="_blank">MathALÉA</a></div>
+                          <div class="mycontent">
+                            <div class="myimage"><a href="https://coopmaths.fr/mathalea.html" target="_blank"><img src="img/mathalea.png" class="plain"></a></div>
+                            <div class="mydesc">Fiches d'exercices ou diaporamas à valeurs aléatoires (module MathALÉA du site Coopmaths).</div>
+                          </div>
+                        </div>
+                        <div class="mycell">
+                          <div class="mytitle"><a href="http://www.multimaths.net/" target="_blank">Multimaths</a></div>
+                          <div class="mycontent">
+                            <div class="myimage"><a href="http://www.multimaths.net/" target="_blank"><img src="img/multimaths.png" class="plain"></a></div>
+                            <div class="mydesc">Applications, de grandes qualités, pour tablettes et ordinateurs, réalisées par Christophe Auclair.</div>
+                          </div>
+                        </div>
+                        <div class="mycell">
+                          <div class="mytitle"><a href="https://doctools.dgpad.net/" target="_blank">Doctools</a></div>
+                          <div class="mycontent">
+                            <div class="myimage"><a href="https://doctools.dgpad.net/" target="_blank"><img src="img/doctools.png" class="plain"></a></div>
+                            <div class="mydesc">QCM ou diaporamas en ligne à travers le module DocEval.</div>
+                          </div>
+                        </div>    
+                      </div>    
+
+  
+                </section> 
+                
+                <section>
+                    <h2>Modalités : sites Web & jeux (2/2)</h2>
+                    
+                    
+                      <div class="mytab">
+                        <div class="mycell">
+                          <div class="mytitle"><a href="https://www.mathsenvie.fr/" target="_blank">M@ths en-vie</a></div>
+                          <div class="mycontent">
+                            <div class="myimage"><a href="https://www.mathsenvie.fr/" target="_blank"><img src="img/maths_en-vie.png" class="plain"></a></div>
+                            <div class="mydesc">Questions Flash à partir de photos du quotidien ou de l'actualité.</div>
+                          </div>
+                        </div>
+                        <div class="mycell">
+                          <div class="mytitle"><a href="https://www.jepeuxpasjaimaths.fr/" target="_blank">J'peux pas, j'ai maths</a></div>
+                          <div class="mycontent">
+                            <div class="myimage"><a href="https://www.jepeuxpasjaimaths.fr/" target="_blank"><img src="img/jpeuxpas.png" class="plain"></a></div>
+                            <div class="mydesc">Calcul mental en ligne.</div>
+                          </div>
+                        </div>
+                        <div class="mycell">
+                          <div class="mytitle"><a href="https://www.quiziniere.com/" target="_blank">Quizinière</a></div>
+                          <div class="mycontent">
+                            <div class="myimage"><a href="https://www.quiziniere.com/" target="_blank"><img src="img/quiziniere.png" class="plain"></a></div>
+                            <div class="mydesc">QCM en ligne (réseau Canopé).</div>
+                          </div>
+                        </div>
+                        <div class="mycell">
+                          <div class="mytitle"><a href="http://www.courseauxnombres.site.ac-strasbourg.fr/" target="_blank">La Course Aux Nombres</a></div>
+                          <div class="mycontent">
+                            <div class="myimage"><a href="http://www.courseauxnombres.site.ac-strasbourg.fr/" target="_blank"><img src="img/coursenombres.png" class="plain"></a></div>
+                            <div class="mydesc">Concours, organisé par un regroupement de onze académies, qui permet de valoriser les activités mentales.</div>
+                          </div>
+                        </div>
+                        <div class="mycell">
+                          <div class="mytitle"><a href="https://calculatice.ac-lille.fr/" target="_blank">Calcul@Tice</a></div>
+                          <div class="mycontent">
+                            <div class="myimage"><a href="https://calculatice.ac-lille.fr/" target="_blank"><img src="img/calculatice.png" class="plain"></a></div>
+                            <div class="mydesc">Calcul mental en ligne. Possibilité d'inscrire les élèves à un concours.</div>
+                          </div>
+                        </div>
+                        <div class="mycell">
+                          <div class="mytitle"><a href="#" target="_blank">&nbsp;</a></div>
+                          <div class="mycontent">
+                            <div class="myimage"><!--<a href="" target="_blank"><img src="img/doctools.png" class="plain"></a>--></div>
+                            <div class="mydesc"></div>
+                          </div>
+                        </div>    
+                      </div>    
+                </section>        
+                
+            </section>
+
+            <section>                 
+                <h2>Perspectives</h2>
+                
+                <div style="display:flex;align-items: center;">
+                    <div>
+                        <p>Il s'agit de tenter d'expérimenter la construction d'automatismes avec les élèves au cours de l'année scolaire.</p>
+                    </div>
+                   <img src="img/lechat.svg" class="plain" style="display:block;"> 
+                </div>
+                
+                <p>Propositions :</p>
+                <p>
+                    <ul>
+                        <li>Création de cartes Flash et partage des cartes.</li>
+                        <li>Questionnaire envoyé à l'issue du premier semestre (modalités mises en œuvre au sein des classes, outils utilisés, difficultés rencontrées, ...)</li>
+                        <li>Élaboration d'un test commun de fin d'année.</li>
+                    </ul>
+                </p>
+            </section>
+
+
+
+
+        </div>
+
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script src="plugin/zoom/zoom.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/menu/menu.js"></script>
+    <script src="plugin/math/math.js"></script>
+
+    <script>
+
+        // More info https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            hash: true,
+
+            center: false,
+            display: 'flex',
+            width: 1200,
+            height: 800,
+            margin:0.01,
+            minScale: 0.2,
+            maxScale: 1.2,
+
+            transition: 'convex', // none/fade/slide/convex/concave/zoom
+            
+            mathjax2: {
+                mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js',
+                config: 'TeX-AMS-MML_SVG-full',
+                // pass other options into `MathJax.Hub.Config()`            
+				extensions: ['tex2jax.js','MatchWebFonts.js'],
+				tex2jax: {
+				  inlineMath: [["$","$"],["\\(","\\)"]],
+                  skipTags: [ 'script', 'noscript', 'style', 'textarea', 'pre' ]
+				},
+				SVG: {    
+					font: "STIX-Web"
+				  },
+				jax: ["input/TeX","output/SVG"],
+				TeX: {extensions: ["color.js"],
+						Augment: {
+						  Definitions: {
+							macros: {
+							  overparen: ['UnderOver','23DC'], // UnderOver represents the MathML element, 23DC the unicode character
+							  underparen: ['UnderOver','23DD'] // UnderOver represents the MathML element, 23DC the unicode character
+							}
+						  }
+						}  				
+					},			
+				messageStyle:'none'                
+            },            
+            
+            plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealMenu, RevealMath.MathJax2 ]
+
+            // More info https://github.com/hakimel/reveal.js#dependencies
+            //dependencies: [
+            //    { src: '../reveal.js/plugin/markdown/marked.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+            //    { src: '../reveal.js/plugin/markdown/markdown.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+            //    { src: '../reveal.js/plugin/highlight/highlight.js', async: true },
+            //    { src: '../reveal.js/plugin/search/search.js', async: true },
+            //    { src: '../reveal.js/plugin/zoom-js/zoom.js', async: true },
+            //    { src: '../reveal.js/plugin/notes/notes.js', async: true }
+            //]
+        });
+
+    </script>
+    
+   
+
+</body>
+
+</html>
